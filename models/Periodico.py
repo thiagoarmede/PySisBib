@@ -14,7 +14,7 @@ class Periodico:
         self.__estante = estante
         self.__prateleira = prateleira
         self.__copias = copias
-        #variaveis inicializadas null
+        #variaveis inicializadas vazias
         self.__data_baixa = None
         self.__motivo_baixa = None
 

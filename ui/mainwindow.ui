@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QWidget" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -10,6 +13,12 @@
     <height>351</height>
    </rect>
   </property>
+  <property name="maximumSize">
+   <size>
+    <width>542</width>
+    <height>351</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>PySisBib</string>
   </property>
@@ -17,7 +26,7 @@
    <property name="geometry">
     <rect>
      <x>200</x>
-     <y>260</y>
+     <y>240</y>
      <width>141</width>
      <height>51</height>
     </rect>
@@ -138,6 +147,30 @@
    </property>
    <property name="text">
     <string>PySisBib</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="botao_add_bibliotecario">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>300</y>
+     <width>121</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <underline>true</underline>
+    </font>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Adicionar Bibliotecário</string>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
    </property>
   </widget>
  </widget>
