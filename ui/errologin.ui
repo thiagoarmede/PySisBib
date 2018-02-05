@@ -22,7 +22,7 @@
   <property name="windowTitle">
    <string>PySisBib - Erro!</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="botao_ok">
    <property name="geometry">
     <rect>
      <x>80</x>

@@ -7,7 +7,6 @@ from views.InitWindow import InitWindow
 from views.LoginErrorWindow import LoginErrorWindow
 # import dos models
 from models.Bibliotecario import Bibliotecario
-
 import sys
 
 
@@ -19,7 +18,8 @@ class MainWindow(QMainWindow):
 
         # Outras janelas a serem abertas.
         self.key_win = None
-        self.init_win = InitWindow()
+        self.init_win = None
+        self.janela_erro = None
 
         # signals e slots relacionados à janela inicial.
         # cadastro de bibliotecário.
@@ -44,6 +44,8 @@ class MainWindow(QMainWindow):
             self.init_win.show()
             self.close()
         else:
+            self.linha_usuario.clear()
+            self.linha_senha.clear()
             self.janela_erro = LoginErrorWindow()
             self.janela_erro.show()
 

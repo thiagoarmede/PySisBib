@@ -7,3 +7,8 @@ class LoginErrorWindow(QWidget):
     def __init__(self, parent=None):
         super(QWidget, self).__init__(parent)
         loadUi('./ui/errologin.ui', self)
+        # eventos
+        self.botao_ok.clicked.connect(self.fechar)
+
+    def fechar(self):
+        self.close()

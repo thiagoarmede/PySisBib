@@ -20,7 +20,6 @@ class Bibliotecario:
             "usuario": self.usuario,
             "senha": self.senha
         }
-
         # inserção no banco de dados.
         try:
             self.bibliotecarios.insert_one(bib_inserir).inserted_id
