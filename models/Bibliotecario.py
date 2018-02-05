@@ -1,4 +1,4 @@
-from main import db
+from Database import Database
 
 
 class Bibliotecario:
@@ -9,6 +9,7 @@ class Bibliotecario:
         self.nome = nome
         self.idade = idade
         self.cpf = cpf
+        # variável que referencia a coleção "bibliotecários" do banco de dados.
 
     def insere_bibliotecario(self):
         # dicionário que armazenará os dados da classe e os inserirá no banco.
@@ -19,9 +20,21 @@ class Bibliotecario:
             "usuario": self.usuario,
             "senha": self.senha
         }
+
         # inserção no banco de dados.
         try:
-            bibliotecarios = db.bibliotecarios
-            bibliotecarios.insert_one(bib_inserir).inserted_id
-        except:
-            raise IOError('Impossivel inserir no banco de dados.');
+            self.bibliotecarios.insert_one(bib_inserir).inserted_id
+        except IOError:
+            print('Impossivel inserir no banco de dados.');
+
+    @staticmethod
+    def autenticar(usuario, senha):
+        bibliotecarios = Database().db.bibliotecarios
+        bib = bibliotecarios.find_one({
+            "usuario": usuario,
+            "senha": senha
+        })
+
+        return True if bib else None
+
+

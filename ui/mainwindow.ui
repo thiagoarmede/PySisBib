@@ -3,7 +3,7 @@
  <class>MainWindow</class>
  <widget class="QWidget" name="MainWindow">
   <property name="windowModality">
-   <enum>Qt::ApplicationModal</enum>
+   <enum>Qt::WindowModal</enum>
   </property>
   <property name="geometry">
    <rect>
@@ -149,7 +149,7 @@
     <string>PySisBib</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="botao_add_bibliotecario">
+  <widget class="QPushButton" name="botao_add_bib">
    <property name="geometry">
     <rect>
      <x>210</x>
