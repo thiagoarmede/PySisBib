@@ -26,10 +26,15 @@
    <property name="geometry">
     <rect>
      <x>150</x>
-     <y>80</y>
+     <y>70</y>
      <width>181</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
    </property>
   </widget>
   <widget class="QLabel" name="label">
@@ -59,12 +64,20 @@
      <height>31</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="placeholderText">
+    <string>Ex: xxx-xxx-xxx.xx</string>
+   </property>
   </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>80</y>
+     <y>70</y>
      <width>121</width>
      <height>20</height>
     </rect>
@@ -82,17 +95,20 @@
    <property name="geometry">
     <rect>
      <x>150</x>
-     <y>130</y>
-     <width>91</width>
-     <height>22</height>
+     <y>120</y>
+     <width>111</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="value">
+    <number>18</number>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>130</y>
+     <y>120</y>
      <width>121</width>
      <height>20</height>
     </rect>
@@ -127,8 +143,8 @@
   <widget class="Line" name="line">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>210</y>
+     <x>20</x>
+     <y>200</y>
      <width>371</width>
      <height>21</height>
     </rect>
@@ -181,6 +197,9 @@
      <width>181</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Ex: bib123</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="linha_senha">

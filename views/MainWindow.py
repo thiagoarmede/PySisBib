@@ -7,6 +7,8 @@ from views.InitWindow import InitWindow
 from views.LoginErrorWindow import LoginErrorWindow
 # import dos models
 from models.Bibliotecario import Bibliotecario
+
+import time
 import sys
 
 
@@ -40,6 +42,7 @@ class MainWindow(QMainWindow):
         texto_senha = self.linha_senha.text()
 
         if Bibliotecario.autenticar(texto_usuario, texto_senha):
+            time.sleep(1)
             self.init_win = InitWindow()
             self.init_win.show()
             self.close()
