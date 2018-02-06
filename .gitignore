@@ -1,2 +1,4 @@
 /__pycache__
 /.idea
+/models/__pycache__
+/views/__pycache__

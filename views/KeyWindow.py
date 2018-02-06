@@ -4,6 +4,7 @@ from Database import Database
 from views.CadastrarBibliotecarioWindow import CadastrarBibliotecarioWindow
 import time
 
+
 class KeyWindow(QWidget):
 
     def __init__(self, parent=None):

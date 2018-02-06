@@ -17,7 +17,7 @@ class Bibliotecario:
         # dicionário que armazenará os dados da classe e os inserirá no banco.
         bib_inserir = {
             "nome": self.nome,
-            "idade": int(self.idade),
+            "idade": self.idade,
             "cpf": self.cpf,
             "usuario": self.usuario,
             "senha": self.senha
@@ -25,6 +25,7 @@ class Bibliotecario:
         # inserção no banco de dados.
         try:
             result = bibliotecarios.insert_one(bib_inserir).inserted_id
+            print(result)
             return True if result else False
         except ConnectionError:
             print('Servidor indisponível.');

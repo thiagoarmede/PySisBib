@@ -14,6 +14,7 @@ class CadastrarBibliotecarioWindow(QWidget):
 
         # eventos
         self.botao_cadastrar.clicked.connect(self.cadastrar_bibliotecario)
+        self.botao_voltar.clicked.connect(self.close)
 
     def cadastrar_bibliotecario(self):
 
@@ -28,12 +29,14 @@ class CadastrarBibliotecarioWindow(QWidget):
         bib_inserir = Bibliotecario(dados["usuario"], dados["senha"], dados["nome"], dados["idade"], dados["cpf"])
         inseriu = bib_inserir.insere_bibliotecario()
 
+        print("Inseriu")
         self.linha_nome.clear()
-        self.spin_idade.clear()
+        self.spin_idade.setValue(18)
         self.linha_cpf.clear()
         self.linha_usuario.clear()
         self.linha_senha.clear()
 
+        print("limpou campos")
         if inseriu:
             self.confirm_window = ConfirmWindow()
             self.confirm_window.show()
